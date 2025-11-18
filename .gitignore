@@ -1,0 +1,18 @@
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Sensitive data
+config.php
+.env
+
+# Vendor/dependencies
+vendor/
+
+# Database files
+*.sql
+*.sqlite
