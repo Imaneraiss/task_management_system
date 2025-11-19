@@ -1,118 +1,260 @@
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
 }
-.header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 15px 30px;
-	background: #23242b;
-	color: #fff;
-}
-.u-name {
-	font-size: 20px;
-	padding-left: 17px;
-}
-.u-name b {
-	color: #127b8e;
-}
-.header i {
-	font-size: 30px;
-	cursor: pointer;
-	color: #fff;
-}
-.header i:hover {
-	color: #127b8e;
-}
-.user-p {
-	text-align: center;
-	padding-left: 10px;
-	padding-top: 25px;
-}
-.user-p img {
-	width: 100px;
-	border-radius: 50%;
-}
-.user-p h4 {
-	color: #ccc;
-	padding: 5px 0;
 
+/* Login page specific styles */
+.login-page {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
+
+.login-form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.lab_input {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Dashboard styles */
+.dashboard-page {
+    background: #f0f2f5;
+}
+
+/* Remove .dashboard-page prefix from these selectors since they need to be global for the checkbox to work */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #23242b;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.u-name {
+    font-size: 20px;
+    padding-left: 17px;
+}
+
+.u-name b {
+    color: #127b8e;
+}
+
+.header i {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.header i:hover {
+    color: #127b8e;
+}
+
+.user-p {
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 25px;
+}
+
+.user-p img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.user-p h4 {
+    color: #ccc;
+    padding: 5px 0;
+}
+
 .side-bar {
-	width: 250px;
-	background: #262931;
-	min-height: 100vh;
-	transition: 500ms width;
+    width: 250px;
+    background: #262931;
+    min-height: 100vh;
+    transition: 500ms width;
+    position: fixed;
+    top: 60px;
+    left: 0;
 }
+
 .body {
-	display: flex;
+    display: flex;
+    margin-top: 60px;
 }
-.section-1 {
-	width: 100%;
-	background: url("../img/bg.jpg");
-	background-size: cover;
-	background-position: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-.section-1 h1 {
-	color: #fff;
-	font-size: 60px;
-}
-.section-1 p {
-	color: #127b8e;
-	font-size: 20px;
-	background: #fff;
-	padding: 7px;
-	border-radius: 5px;
-}
+
 .side-bar ul {
-	margin-top: 20px;
-	list-style: none;
+    margin-top: 20px;
+    list-style: none;
 }
+
 .side-bar ul li {
-	font-size: 16px;
-	padding: 15px 0px;
-	padding-left: 20px;
-	transition: 500ms background;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+    font-size: 16px;
+    padding: 15px 0px;
+    padding-left: 20px;
+    transition: 500ms background;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 .side-bar ul li:hover {
-	background: #127b8e;
+    background: #127b8e;
 }
+
 .side-bar ul li a {
-	text-decoration: none;
-	color: #eee;
-	cursor: pointer;
-	letter-spacing: 1px;
+    text-decoration: none;
+    color: #eee;
+    cursor: pointer;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
 }
+
 .side-bar ul li a i {
-	display: inline-block;
-	padding-right: 10px;
-	font-size: 23px;
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 23px;
+    width: 30px;
 }
+
 #navbtn {
-	display: inline-block;
-	margin-left: 70px;
-	font-size: 20px;
-	transition: 500ms color;
+    display: inline-block;
+    margin-left: 70px;
+    font-size: 20px;
+    transition: 500ms color;
 }
+
 #checkbox {
-	display: none;
+    display: none;
 }
-#checkbox:checked ~ .body .side-bar {
-	width: 60px;
+
+/* Fixed checkbox toggle - these need to be global selectors */
+#checkbox:checked + .header + .body .side-bar {
+    width: 60px;
 }
-#checkbox:checked ~ .body .side-bar .user-p{
-	visibility: hidden;
+
+#checkbox:checked + .header + .body .side-bar .user-p {
+    visibility: hidden;
 }
-#checkbox:checked ~ .body .side-bar a span{
-	display: none;
+
+#checkbox:checked + .header + .body .side-bar a span {
+    display: none;
+}
+
+#checkbox:checked + .header + .body .side-bar ul li a i {
+    padding-right: 0;
+}
+
+/* Main content area for dashboard */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    transition: 500ms margin-left, 500ms width;
+}
+
+#checkbox:checked + .header + .body .main-content {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+}
+
+/* Hide dashboard elements on login page */
+.login-page .header,
+.login-page .side-bar,
+.login-page .body {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-form {
+        padding: 30px 20px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+    
+    .side-bar {
+        width: 100%;
+        transform: translateX(-100%);
+    }
+    
+    #checkbox:checked + .header + .body .side-bar {
+        transform: translateX(0);
+        width: 100%;
+    }
 }
