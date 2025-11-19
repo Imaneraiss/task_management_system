@@ -170,8 +170,11 @@ input[type="password"]:focus {
     text-overflow: ellipsis;
 }
 
-.side-bar ul li:hover {
+.side-bar ul li:hover  {
     background: #127b8e;
+}
+.side-bar ul .active {
+    background-color: #127b8e !important ;
 }
 
 .side-bar ul li a {
@@ -237,7 +240,9 @@ input[type="password"]:focus {
 .login-page .body {
     display: none !important;
 }
-
+.section-1{
+    padding-left: 260px;
+}
 /* Responsive */
 @media (max-width: 480px) {
     .login-form {
