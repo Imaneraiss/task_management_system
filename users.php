@@ -37,8 +37,8 @@ if (isset($_SESSION['role']) && isset($_SESSION['id'])){
                     <td><?= $user['username'] ?></td>
                     <td><?= $user['role'] ?></td>
                     <td>
-                        <a href="edit_user.php?id=<?=$user['id']?>" class="btn edit-btn">Edit</a>
-                        <a href="delete_user.php?id=<?$user['id']?>" class="btn delete-btn">Delete</a>
+                        <a href="edit-user.php?id=<?=$user['id']?>" class="btn edit-btn">Edit</a>
+                        <a href="delete-user.php?id=<?$user['id']?>" class="btn delete-btn">Delete</a>
                     </td>
                 </tr>
                 <?php } ?>
