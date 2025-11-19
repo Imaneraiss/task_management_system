@@ -1,6 +1,10 @@
 <?php 
 session_start();
-if (isset($_SESSION['role']) && isset($_SESSION['id'])){ ?>
+if (isset($_SESSION['role']) && isset($_SESSION['id'])){
+    include "DB_connection.php";
+    include "app/Model/User.php";
+    $users =get_all_users ($conn); 
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,31 +20,32 @@ if (isset($_SESSION['role']) && isset($_SESSION['id'])){ ?>
 	<div class="body">
 		<?php include("inc/nav.php")?>;
         <section class="section-1">
-            Manage Users
-            <table class="table">
-                <thead>  <!-- Fixed from <thread> to <thead> -->
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                </tbody>
+            <h4 class="title">Manage Users <a href="add-user.php" class="btn">Add User</a></h4>
+            <?php if($users != 0){?> 
+            <table class="main-table">
+                <tr>
+                    <th>id</th>
+                    <th>Full Name</th>
+                    <th>User Name</th>
+                    <th>Role</th>
+                    <th> Action</th>
+                </tr>
+                <?php $i=0; foreach ($users as $user ){ ?>
+                <tr>
+                    <td><?= ++$i ?></td>
+                    <td><?= $user['full_name'] ?></td>
+                    <td><?= $user['username'] ?></td>
+                    <td><?= $user['role'] ?></td>
+                    <td>
+                        <a href="edit_user.php?id=<?=$user['id']?>" class="btn edit-btn">Edit</a>
+                        <a href="delete_user.php?id=<?$user['id']?>" class="btn delete-btn">Delete</a>
+                    </td>
+                </tr>
+                <?php } ?>
             </table>
+            <?php }else{?>
+                <h4>Empty</h4>
+            <?php } ?>
         </section>
 	</div>
     <script type="text/javascript">

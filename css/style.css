@@ -152,7 +152,8 @@ input[type="password"]:focus {
 
 .body {
     display: flex;
-    margin-top: 60px;
+    margin-top: 40px;
+    min-height: 100vh;
 }
 
 .side-bar ul {
@@ -242,6 +243,88 @@ input[type="password"]:focus {
 }
 .section-1{
     padding-left: 260px;
+    padding-top: 20px;
+}
+.section-1 .title {
+    margin-bottom: 10px;
+} 
+.btn{
+    text-decoration: none;
+	display: inline-block;
+    padding-left: 10px;
+	border: none;
+	padding: 10px 15px;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+	transition: background .5s;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+.btn:hover{
+    opacity: .6;
+}
+.section-1 .title a{
+	background: #00CF22;
+}
+.section-1 {
+    margin-top: 20px;
+    width: 100%;
+    background: #ffe;
+}
+
+.main-table , .main-table tr, .main-table th,.main-table td {
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+    padding: 7px;
+}
+.main-table {
+    width :90%;
+    margin-top :30px;
+}
+
+.edit-btn{
+	background: #4984ea;
+    margin-right: 10px;
+}
+.delete-btn{
+    background: red;
+}
+
+.form-1 {
+	width: 90%;
+	max-width: 500px;
+}
+.input-holder lable {
+	display: block;
+	margin-bottom: 6px;
+}
+.input-1 {
+	border: 2px solid #ccc;
+	width: 100%;
+	padding: 10px;
+	font-size: 15px;
+	outline: none;
+	border-radius: 5px;
+	display: block;
+}
+
+.input-1:focus{
+	border-color: #555;
+}
+.danger {
+	background: #FF98AA;
+	color: #B20008;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.success {
+	background: #80CE91;
+	color: #009D22;
+	padding: 10px;
+	margin-bottom: 10px;
 }
 /* Responsive */
 @media (max-width: 480px) {
