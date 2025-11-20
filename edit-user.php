@@ -57,7 +57,7 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
 					<lable>Password</lable>
 					<input type="text" name="password" value="********" class="input-1" placeholder="Password"><br>
 				</div>
-				<input type="text" name="id" value="<?=$user['id']?>" hidden> // Just to be sent to POST
+				<input type="text" name="id" value="<?=$user['id']?>" hidden> 
 
 				<button class=" btn edit-btn">Update</button>
 			</form>

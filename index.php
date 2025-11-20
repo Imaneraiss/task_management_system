@@ -10,8 +10,7 @@ if (isset($_SESSION['role']) && isset($_SESSION['id'])){ ?>
 </head>
 <body class="dashboard-page">
 	<input type="checkbox" id="checkbox">
-		<?php include("inc/header.php")?>;
-
+	<?php include("inc/header.php")?>;
 	<div class="body">
 		<?php include("inc/nav.php")?>
 	</div>

@@ -15,15 +15,15 @@ if (isset($_SESSION['role']) && isset($_SESSION['id'])){
         $id        = validate_input(($_POST['id']));
         if (empty($user_name)){
             $err = "User name is required";
-            header("Location:../edit-user.php?error=$err");
+            header("Location:../edit-user.php?error=$err&id=$id");
             exit();
         }else if (empty($password)){
             $err = "Password is required";
-            header("Location:../edit-user.php?error=$err");
+            header("Location:../edit-user.php?error=$err&id=$id");
             exit();
         }else if (empty($full_name)){
             $err = "Full name is required";
-            header("Location:../edit-user.php?error=$err");
+            header("Location:../edit-user.php?error=$err&id=$id");
             exit();
         }else{
             try {
@@ -31,7 +31,7 @@ if (isset($_SESSION['role']) && isset($_SESSION['id'])){
                 $hashpass =password_hash($password,PASSWORD_DEFAULT);
                 $data = array($full_name,$user_name,$hashpass,"employee",$id,"employee");
                 update_user($conn,$data);
-                header("Location:../edit-user.php?success=User updated successfully");
+                header("Location:../edit-user.php?success=User updated successfully&id=$id");
 
             } catch (PDOException $e) {
                 // Database error

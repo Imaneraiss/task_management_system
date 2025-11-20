@@ -30,15 +30,15 @@ if (isset($_SESSION['role']) && isset($_SESSION['id'])){
                     <th>Role</th>
                     <th> Action</th>
                 </tr>
-                <?php $i=0; foreach ($users as $user ){ ?>
+                <?php foreach ($users as $user ){ ?>
                 <tr>
-                    <td><?= ++$i ?></td>
+                    <td><?= $user['id'] ?></td>
                     <td><?= $user['full_name'] ?></td>
                     <td><?= $user['username'] ?></td>
                     <td><?= $user['role'] ?></td>
                     <td>
                         <a href="edit-user.php?id=<?=$user['id']?>" class="btn edit-btn">Edit</a>
-                        <a href="delete-user.php?id=<?$user['id']?>" class="btn delete-btn">Delete</a>
+                        <a href="delete-user.php?id=<?=$user['id']?>" class="btn delete-btn">Delete</a>
                     </td>
                 </tr>
                 <?php } ?>
