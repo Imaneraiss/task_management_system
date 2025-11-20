@@ -35,16 +35,16 @@ if (isset($_SESSION['role']) && isset($_SESSION['id'])){
                 <?php } ?>
 
 				<div class="input-holder">
-					<lable>Title</lable>
+					<label>Title</label>
 					<input type="text" name="title" class="input-1" placeholder="Title" ><br>
 				</div>
 				<div class="input-holder">
-					<lable>Description</lable>
+					<label>Description</label>
                     <textarea name="description" class="input-1" placeholder="Description"></textarea>
                     <br>
                 </div>
 				<div class="input-holder">
-					<lable>Assigned to</lable>
+					<label>Assigned to</label>
 					<select name="assigned_to" class="input-1" >
                         <option value="0">Select employee</option>
                         <?php if($users != 0) {
