@@ -20,6 +20,10 @@ if (isset($_SESSION['role']) && isset($_SESSION['id'])){
             $err = "Description is required";
             header("Location:../create_task.php?error=$err");
             exit();
+        }else if ($assigned_to ==0){
+            $err = "Select User is required";
+            header("Location:../create_task.php?error=$err");
+            exit();
         }else{
             try {
                 include "Model/Task.php";
