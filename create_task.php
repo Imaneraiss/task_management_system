@@ -43,6 +43,11 @@ if (isset($_SESSION['role']) && isset($_SESSION['id'])){
                     <textarea name="description" class="input-1" placeholder="Description"></textarea>
                     <br>
                 </div>
+                <div class="input-holder">
+					<label>Due time</label>
+					<input type="date" name="due_name" class="input-1" placeholder="Due time" ><br>
+                    <br>
+                </div>
 				<div class="input-holder">
 					<label>Assigned to</label>
 					<select name="assigned_to" class="input-1" >
@@ -56,6 +61,7 @@ if (isset($_SESSION['role']) && isset($_SESSION['id'])){
                     </select>
                     <br>
 				</div>
+
 				<input type="text" name="id" value="<?=$user['id']?>" hidden> 
 
 				<button class=" btn edit-btn">Update</button>
