@@ -41,6 +41,11 @@
 	$stmt->execute($data);
     }
 
+    function update_profile($conn, $data){
+	$sql = "UPDATE users SET full_name=?,  password=? WHERE id=? ";
+	$stmt = $conn->prepare($sql);
+	$stmt->execute($data);
+}
     
 
 
