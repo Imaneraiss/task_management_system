@@ -47,6 +47,12 @@
 	$stmt->execute($data);
 }
     
+function count_users($conn){
+	$sql = "SELECT id FROM users WHERE role='employee'";
+	$stmt = $conn->prepare($sql);
+	$stmt->execute([]);
 
+	return $stmt->rowCount();
+}
 
 ?>

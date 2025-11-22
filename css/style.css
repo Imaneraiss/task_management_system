@@ -267,9 +267,6 @@ input[type="password"]:focus {
     opacity: .6;
 }
 
-.btn-feat{
-    color: rgb(0, 0, 0)  ;
-}
 .section-1 .title a{
 	background: #00CF22;
 }
@@ -330,7 +327,30 @@ input[type="password"]:focus {
 	padding: 10px;
 	margin-bottom: 10px;
 }
-
+.dashboard {
+	display: flex;
+	max-width: 650px;
+	width: 95%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.dashboard-item {
+    text-align: center;
+    background: #262931;
+    width: 200px;
+    padding: 30px 5px;
+    margin-bottom: 40px;
+}
+.dashboard-item i{
+	display: block;
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.dashboard-item span{
+	display: block;
+    color: #fff;
+}
 /* Responsive */
 @media (max-width: 480px) {
     .login-form {
